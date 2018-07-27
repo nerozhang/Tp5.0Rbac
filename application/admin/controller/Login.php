@@ -25,7 +25,7 @@ class Login extends Controller {
         //接收数据
         $request = Request::instance();
         $post_data = $request->post();
-        
+
         //定义验证规则
         $rules = [
             "account_name" => "require",
