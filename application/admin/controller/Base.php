@@ -17,7 +17,8 @@ class Base extends Controller {
         //直接实例化request类方便后期调用
         $this->request = $request;
         if (!Session::get("id")) {
-            $this->error('请先登录', Url::build("admin/login/index"));
+//            $this->error('请先登录', Url::build("admin/login/index"));
+            $this->redirect("admin/login/index");
         }
         //获取权限
         $pri = Session::get("privelege");
